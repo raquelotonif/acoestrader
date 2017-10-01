@@ -1,0 +1,27 @@
+<nav class="blog-navbar">
+  <a href="/">Logo</a>
+  <section class="navbar-page-links hidden-xs">
+    <a href="/sobre">Sobre</a>
+    <a href="/contato">Contato</a>
+    <a href="/download">Baixe</a>
+  </section>
+
+
+  <a (click)="toggleSidemenu()" *ngIf="!showSidemenu"
+     class="sidemenu-icon visible-xs">
+    <i class="glyphicon glyphicon-menu-hamburger"></i>
+  </a>
+  <div class="sidebar" *ngIf="showSidemenu">
+    <a href="/sobre">Sobre</a>
+    <a href="/contato">Contato</a>
+    <a href="/download">Baixe</a>
+  </div>
+</nav>
+
+
+<div class="blog-scroll">
+  <section class="body">
+    <router-outlet></router-outlet>
+  </section>
+  <footer class="footer"></footer>
+</div>

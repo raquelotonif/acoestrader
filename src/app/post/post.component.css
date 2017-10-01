@@ -1,0 +1,16 @@
+@media(max-width: 767px){
+  .post-wrapper {
+    padding: 20px;
+  }
+}
+@media(min-width: 768px){
+  .post-wrapper {
+    padding: 20px 10%;
+  }
+}
+
+.post {
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}

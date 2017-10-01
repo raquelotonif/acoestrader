@@ -1,0 +1,40 @@
+@import url("../node_modules/bootstrap/dist/css/bootstrap.min.css");
+
+body {
+  overflow: hidden;
+  background: #f5f5f5;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #666;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #666;
+}
+
+a:focus{
+  text-decoration: none;
+  color: #666;
+}
+
+ul {
+  display: inline-block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+.blog {
+  display: inline-block;
+  float: left;
+  width: 100%;
+}
