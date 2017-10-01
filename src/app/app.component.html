@@ -19,9 +19,9 @@
 </nav>
 
 
-<div class="blog-scroll">
+<div class="blog-scroll" #bodyScroll>
   <section class="body">
-    <router-outlet></router-outlet>
+    <router-outlet (deactivate)="onDeactivate()"></router-outlet>
   </section>
   <footer class="footer"></footer>
 </div>
