@@ -75,14 +75,20 @@ input:-webkit-autofill {
     width: 100%;
     font-weight: bold;
     margin-top: 15px;
-    background: #fe9700;
     outline: none;
     border-radius: 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
     line-height: 1.8;
     text-transform: uppercase;
+    color: #fff;
+}
+.formulario .button-call {
+    background: #fe9700;
 }
 
+.formulario .button-success {
+    background: #38c336;
+}
 .icon-form {
     font-size: 90px;
     margin-top: 20px;

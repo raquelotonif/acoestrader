@@ -51,4 +51,10 @@ export class LeadFormComponent implements OnInit {
         });
     }
 
+    goToDownloadEbook() {
+        if (!this.leadSaved) {
+            return;
+        }
+        window.open("https://drive.google.com/file/d/0ByyRKAPF0hnJZXZlOTRZbTZzbmM/view?usp=sharing", "_blank");
+    }
 }

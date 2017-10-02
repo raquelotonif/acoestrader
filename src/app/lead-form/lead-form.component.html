@@ -1,36 +1,39 @@
 <aside class="formulario">
-    <section>
-        <p class="primary-call">Junte-se a nossa comunidade e receba um ebook gratuito!</p>
-    </section>
-    <form #leadForm="ngForm" *ngIf="!leadSaved">
-        <div>
-            <span>Nome</span>
-            <input type="text" [(ngModel)]="lead.name"
-                   required name="name" minlength="3"/>
-        </div>
-        <div>
-            <span>Sobrenome</span>
-            <input type="text" [(ngModel)]="lead.lastname"
-                   required name="lastname" minlength="3"/>
-        </div>
-        <div>
-            <span>Email</span>
-            <input type="email" required email
-                   [(ngModel)]="lead.email" name="email"/>
-        </div>
-        <button type="submit" class="btn button btn-warning"
-                (click)="saveLead(lead.name, lead.lastname, lead.email)"
-                [disabled]="!leadForm.form.valid">
-            Quero fazer parte!
-        </button>
-    </form>
+    <section *ngIf="!leadSaved">
+        <p class="primary-call">
+            Junte-se a nossa comunidade e receba um ebook gratuito!</p>
 
+        <form #leadForm="ngForm">
+            <div>
+                <span>Nome</span>
+                <input type="text" [(ngModel)]="lead.name"
+                       required name="name" minlength="3"/>
+            </div>
+            <div>
+                <span>Sobrenome</span>
+                <input type="text" [(ngModel)]="lead.lastname"
+                       required name="lastname" minlength="3"/>
+            </div>
+            <div>
+                <span>Email</span>
+                <input type="email" required email
+                       [(ngModel)]="lead.email" name="email"/>
+            </div>
+            <button type="submit" class="btn button button-call"
+                    (click)="saveLead(lead.name, lead.lastname, lead.email)"
+                    [disabled]="!leadForm.form.valid">
+                Quero fazer parte!
+            </button>
+        </form>
+    </section>
     <section *ngIf="leadSaved">
-        <p>Obrigado por confiar em nosso trabalho.
-            Enviamos um email para você contendo
-            o link para download do ebook.</p>
         <i class="glyphicon glyphicon-check
  icon-form icon-form-complete"></i>
+        <p>Obrigado por confiar em nosso trabalho.
+            Clique no botão abaixo para baixar o ebook</p>
+
+     <button (click)="goToDownloadEbook()"
+     class="btn btn-success button button-success">baixar ebook</button>
     </section>
     <section *ngIf="leadError">
         <p>Ops =(</p>
