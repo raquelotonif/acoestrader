@@ -1,7 +1,7 @@
 @import url("../node_modules/bootstrap/dist/css/bootstrap.min.css");
 
 body {
-  overflow: hidden;
+  /*overflow: hidden;*/
   background: #f5f5f5;
 }
 

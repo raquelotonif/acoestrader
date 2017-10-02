@@ -1,19 +1,23 @@
 .header {
     z-index: -1;
-    min-height: calc(100vh - 60px);
-    background: rgb(0, 165, 157);
+    /*min-height: calc(100vh - 60px);*/
+    min-height: 100vh;
+    overflow: auto;
+    background-image: url('../../assets/images/banner.jpg');
+    background-size: auto 100%;
 }
 
 @media(max-width: 767px){
     .header {
-        padding: 20px;
+        padding: 80px 20px;
     }
 }
 @media(min-width: 768px){
     .header {
-        padding: 20px calc(10% - 20px) 20px calc(10% - 40px);
+        padding: 80px calc(10% - 20px) 20px calc(10% - 40px);
     }
 }
+
 .call {
     display: inline-block;
     float: left;
@@ -24,8 +28,10 @@
 .formulario {
     display: inline-block;
     float: left;
-    background: rgba(255, 255, 255, 0.3);
     padding: 20px;
+    border-radius: 10px;
+    background: rgba(101, 198, 203, 0.7);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 767px) {
@@ -50,7 +56,17 @@
     background: transparent;
     outline: none;
     border: none;
-    border-bottom:0.1em solid #ffffff;
+    border-bottom:0.08em solid #ffffff;
+}
+
+.formulario .button{
+    width: 100%;
+    margin-top: 15px;
+    text-transform: uppercase;
+    background: #fe9700;
+    outline: none;
+    border-radius: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 }
 
 .posts-container {
