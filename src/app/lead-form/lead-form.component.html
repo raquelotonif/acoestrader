@@ -1,0 +1,45 @@
+<aside class="formulario">
+    <section>
+        <p class="primary-call">Junte-se a nossa comunidade e receba um ebook gratuito!</p>
+    </section>
+    <form #leadForm="ngForm"
+          (ngSubmit)="saveLead()" *ngIf="!leadSaved">
+        <div>
+            <span>Nome</span>
+            <input type="text" [(ngModel)]="lead.name"
+                   required name="name" minlength="3"/>
+        </div>
+        <div>
+            <span>Sobrenome</span>
+            <input type="text" [(ngModel)]="lead.lastname"
+                   required name="lastname" minlength="3"/>
+        </div>
+        <div>
+            <span>Email</span>
+            <input type="email" required email
+                   [(ngModel)]="lead.email" name="email"/>
+        </div>
+        <button type="submit" class="btn button btn-warning"
+                [disabled]="!leadForm.form.valid">
+            Quero fazer parte!
+        </button>
+    </form>
+
+    <section *ngIf="leadSaved">
+        <p>Obrigado por confiar em nosso trabalho.
+            Enviamos um email para você contendo
+            o link para download do ebook.</p>
+        <i class="glyphicon glyphicon-check
+ icon-form icon-form-complete"></i>
+    </section>
+    <section *ngIf="leadError">
+        <p>Ops =(</p>
+        <p>Desculpe, ocorreu um erro em nosso servidor.</p>
+        <p>Deseja tentar novamente?</p>
+        <button class="btn btn-error button">
+            Tentar Novamente
+        </button>
+        <i class="glyphicon glyphicon-remove-circle
+icon-form icon-form-error"></i>
+    </section>
+</aside>
