@@ -7,7 +7,8 @@ import 'rxjs/add/operator/map';
 export class Lead {
     constructor(public name: string,
                 public lastname: string,
-                public email: string) {
+                public email: string,
+                public ipv4?: string) {
     }
 }
 
@@ -18,10 +19,9 @@ export class Lead {
 })
 
 export class LeadFormComponent implements OnInit {
-    lead = new Lead('', '', '');
+    lead = new Lead('', '', '', '');
     leadSaved: boolean = false;
     leadError: boolean = false;
-    ipv4 = '';
 
     constructor(private angularFire: AngularFireDatabase,
                 private jsonp: Jsonp) {
@@ -35,17 +35,19 @@ export class LeadFormComponent implements OnInit {
         this.jsonp.get('//api.ipify.org/?format=jsonp&callback=JSONP_CALLBACK')
             .map(response => response.json())
             .subscribe(data => {
-                this.ipv4 = data['ip']
+                this.lead['ipv4'] = data['ip']
+            }, error => {
+                console.log('Erro na captura de IP');
             });
     }
 
-    saveLead(lead) {
-        this.lead = new Lead(lead.name, lead.lastname, lead.email);
+    saveLead(name, lastname, email) {
+        this.lead = new Lead(name, lastname, email, this.lead.ipv4);
         this.angularFire.list("leads").push(this.lead).then(newLead => {
             this.leadSaved = true;
         }, error => {
-            console.log('f');
             this.leadError = true;
+            console.log(error.message);
         });
     }
 

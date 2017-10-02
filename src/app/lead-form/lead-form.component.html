@@ -2,8 +2,7 @@
     <section>
         <p class="primary-call">Junte-se a nossa comunidade e receba um ebook gratuito!</p>
     </section>
-    <form #leadForm="ngForm"
-          (ngSubmit)="saveLead()" *ngIf="!leadSaved">
+    <form #leadForm="ngForm" *ngIf="!leadSaved">
         <div>
             <span>Nome</span>
             <input type="text" [(ngModel)]="lead.name"
@@ -20,6 +19,7 @@
                    [(ngModel)]="lead.email" name="email"/>
         </div>
         <button type="submit" class="btn button btn-warning"
+                (click)="saveLead(lead.name, lead.lastname, lead.email)"
                 [disabled]="!leadForm.form.valid">
             Quero fazer parte!
         </button>
