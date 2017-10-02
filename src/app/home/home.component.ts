@@ -1,17 +1,12 @@
 import {Component, OnInit} from '@angular/core';
-import {AngularFireDatabase} from 'angularfire2/database';
-import {Jsonp} from '@angular/http';
-import 'rxjs/add/operator/map';
 
 @Component({
-    selector: 'app-home',
     templateUrl: './home.component.html',
     styleUrls: ['./home.component.css']
 })
+
 export class HomeComponent implements OnInit {
-    leadSaved: boolean = false;
-    leadError: boolean = false;
-    ipv4 = '';
+
     posts: any[] = [
         {
             id: 1, image: 'assets/images/thumb1.svg',
@@ -54,33 +49,9 @@ export class HomeComponent implements OnInit {
         }
     ];
 
-    constructor(private angularFire: AngularFireDatabase,
-                private jsonp: Jsonp) {
+    constructor() {
     }
 
     ngOnInit() {
-        this.getIpv4()
-    }
-
-    getIpv4() {
-        this.jsonp.get('//api.ipify.org/?format=jsonp&callback=JSONP_CALLBACK')
-            .map(response => response.json())
-            .subscribe(data => {
-                this.ipv4 = data['ip']
-            });
-    }
-
-    saveLead(name, email, lastname) {
-        this.angularFire.list("leads").push({
-            name: name,
-            lastname: lastname,
-            email: email,
-            ipv4: this.ipv4
-        }).then(newLead => {
-            this.leadSaved = true;
-        }, error => {
-            console.log('f');
-            this.leadError = true;
-        });
     }
 }

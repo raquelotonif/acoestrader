@@ -3,45 +3,7 @@
         <p></p>
         <p></p>
     </section>
-
-    <aside class="formulario">
-        <section>
-            <p class="primary-call">Junte-se a nossa comunidade e receba um ebook gratuito!</p>
-        </section>
-        <form *ngIf="!leadSaved">
-            <div>
-                <span>Nome</span>
-                <input type="text" [(ngModel)]="name" name="name"/>
-            </div>
-            <div>
-                <span>Sobrenome</span>
-                <input type="text" [(ngModel)]="lastname" name="lastname"/>
-            </div>
-            <div>
-                <span>Email</span>
-                <input type="email" [(ngModel)]="email" name="email"/>
-            </div>
-            <button type="submit" class="btn button btn-warning"
-                    (click)="saveLead(name,email,lastname)">Quero fazer parte!
-            </button>
-        </form>
-        <section *ngIf="leadSaved">
-            <p>Obrigado por confiar em nosso trabalho.
-                Enviamos um email para você contendo
-                o link para download do ebook.</p>
-            <i class="glyphicon glyphicon-check
- icon-form icon-form-complete"></i>
-        </section>
-        <section *ngIf="leadError">
-            <p>Ops =(</p>
-            <p>Desculpe, ocorreu um erro em nosso servidor.</p>
-            <p>Deseja tentar novamente?</p>
-            <button class="btn btn-error button">
-                Tentar Novamente</button>
-            <i class="glyphicon glyphicon-remove-circle
-icon-form icon-form-error"></i>
-        </section>
-    </aside>
+    <lead-form></lead-form>
 </header>
 <!--<section class="posts-container">-->
 <!--<ul class="posts">-->
