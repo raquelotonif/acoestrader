@@ -9,7 +9,8 @@ import 'rxjs/add/operator/map';
     styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-    imagesRef = '';
+    leadSaved: boolean = false;
+    leadError: boolean = false;
     ipv4 = '';
     posts: any[] = [
         {
@@ -65,7 +66,7 @@ export class HomeComponent implements OnInit {
         this.jsonp.get('//api.ipify.org/?format=jsonp&callback=JSONP_CALLBACK')
             .map(response => response.json())
             .subscribe(data => {
-               this.ipv4 = data['ip']
+                this.ipv4 = data['ip']
             });
     }
 
@@ -76,10 +77,10 @@ export class HomeComponent implements OnInit {
             email: email,
             ipv4: this.ipv4
         }).then(newLead => {
-            console.log(newLead.key);
-            console.log(newLead)
+            this.leadSaved = true;
         }, error => {
-            console.log(error.message);
+            console.log('f');
+            this.leadError = true;
         });
     }
 }
