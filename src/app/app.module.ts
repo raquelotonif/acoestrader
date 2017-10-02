@@ -2,9 +2,9 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {HttpModule} from '@angular/http'
 import {FormsModule} from '@angular/forms';
+import {JsonpModule} from '@angular/http';
 import {AngularFireModule} from 'angularfire2';
 import {AngularFireDatabase} from 'angularfire2/database';
-
 import {FirebaseConfig} from './../environments/firebase.config';
 
 
@@ -20,6 +20,7 @@ import {AppComponent} from './app.component';
         BrowserModule,
         HttpModule,
         FormsModule,
+        JsonpModule,
         appRouting.routes,
         AngularFireModule.initializeApp(FirebaseConfig)
     ],
