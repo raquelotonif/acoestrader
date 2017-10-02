@@ -1,19 +1,19 @@
-import {Component, ViewChild} from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
-  showSidemenu = false;
-  @ViewChild('bodyScroll') bodyScroll;
+    showSidemenu = false;
 
-  toggleSidemenu() {
-    this.showSidemenu = !this.showSidemenu
-  }
+    toggleSidemenu() {
+        this.showSidemenu = !this.showSidemenu
+    }
 
-  onDeactivate() {
-  this.bodyScroll.scrollTo(0, 0);
-  }
+    onActivate(e, bodyScroll) {
+        bodyScroll.scrollTop = 0;
+    }
 }

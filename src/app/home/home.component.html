@@ -1,28 +1,37 @@
 <header class="header">
-  <img src=""/>
-  <p></p>
-  <p></p>
+    <img src=""/>
+    <section class="call">
+        <p></p>
+        <p></p>
+    </section>
+
+    <form class="formulario">
+        <div>
+            <span>Nome</span>
+            <input type="text" [(ngModel)]="name" name="name"/>
+        </div>
+        <div>
+            <span>Email</span>
+            <input type="email" [(ngModel)]="email" name="email"/>
+        </div>
+        <button type="submit" class="btn btn-warning"
+                (click)="saveLead(name,email)">Inscrever
+        </button>
+    </form>
 </header>
-<section class="posts-container">
-  <ul class="posts">
-    <li class="card-wrapper" *ngFor="let post of posts">
-      <a routerLink="posts/{{post.id}}" class="card">
-        <div class="card-thumb">
-          <img [src]="post.image" class="img-responsive"/>
-        </div>
-        <div class="card-body">
-          <p class="card-title">{{post.title}}</p>
-          <p class="card-content">{{post.content}}</p>
-        </div>
-      </a>
-    </li>
-  </ul>
-  <aside class="email-marketing"></aside>
-  <ul class="posts">
-    <li class="card" *ngFor="let post of posts2">
-      <img src="/" class="post-thumb"/>
-      <p></p>
-      <p></p>
-    </li>
-  </ul>
-</section>
+<!--<section class="posts-container">-->
+    <!--<ul class="posts">-->
+        <!--<li class="card-wrapper" *ngFor="let post of posts">-->
+            <!--<a routerLink="posts/{{post.id}}" class="card">-->
+                <!--<div class="card-thumb">-->
+                    <!--<img [src]="post.image" class="img-responsive"/>-->
+                <!--</div>-->
+                <!--<div class="card-body">-->
+                    <!--<p class="card-title">{{post.title}}</p>-->
+                    <!--<p class="card-content">{{post.content}}</p>-->
+                <!--</div>-->
+            <!--</a>-->
+        <!--</li>-->
+    <!--</ul>-->
+    <!--&lt;!&ndash;<aside class="email-marketing"></aside>&ndash;&gt;-->
+<!--</section>-->

@@ -1,27 +1,27 @@
 <nav class="blog-navbar">
   <a href="/">Logo</a>
-  <section class="navbar-page-links hidden-xs">
-    <a href="/sobre">Sobre</a>
-    <a href="/contato">Contato</a>
-    <a href="/download">Baixe</a>
-  </section>
+  <!--<section class="navbar-page-links hidden-xs">-->
+    <!--<a href="/sobre">Sobre</a>-->
+    <!--<a href="/contato">Contato</a>-->
+    <!--<a href="/download">Baixe</a>-->
+  <!--</section>-->
 
 
-  <a (click)="toggleSidemenu()" *ngIf="!showSidemenu"
-     class="sidemenu-icon visible-xs">
-    <i class="glyphicon glyphicon-menu-hamburger"></i>
-  </a>
-  <div class="sidebar" *ngIf="showSidemenu">
-    <a href="/sobre">Sobre</a>
-    <a href="/contato">Contato</a>
-    <a href="/download">Baixe</a>
-  </div>
+  <!--<a (click)="toggleSidemenu()"-->
+     <!--class="sidemenu-icon visible-xs">-->
+    <!--<i class="glyphicon glyphicon-menu-hamburger"></i>-->
+  <!--</a>-->
+  <!--<div class="sidebar visible-xs" *ngIf="showSidemenu">-->
+    <!--<a href="/sobre">Sobre</a>-->
+    <!--<a href="/contato">Contato</a>-->
+    <!--<a href="/download">Baixe</a>-->
+  <!--</div>-->
 </nav>
 
 
 <div class="blog-scroll" #bodyScroll>
   <section class="body">
-    <router-outlet (deactivate)="onDeactivate()"></router-outlet>
+    <router-outlet (activate)="onActivate($event, bodyScroll)"></router-outlet>
   </section>
-  <footer class="footer"></footer>
+  <!--<footer class="footer"></footer>-->
 </div>
