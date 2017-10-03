@@ -4,11 +4,16 @@ import {AngularFireDatabase} from 'angularfire2/database';
 import {Jsonp} from '@angular/http';
 import 'rxjs/add/operator/map';
 
+import * as moment from 'moment';
+import 'moment/locale/pt-br';
+moment.locale('pt-BR');
+
 export class Lead {
-    constructor(public name: string,
-                public lastname: string,
-                public email: string,
-                public ipv4?: string) {
+    constructor(public email: string,
+                public nome: string,
+                public ip: string,
+                public tipo: string,
+                public data_hora: string,) {
     }
 }
 
@@ -19,7 +24,8 @@ export class Lead {
 })
 
 export class LeadFormComponent implements OnInit {
-    lead = new Lead('', '', '', '');
+    lead = new Lead('', '', '', 'B2C', '');
+    tipoChecked = 'B2C';
     leadSaved: boolean = false;
     leadError: boolean = false;
 
@@ -28,21 +34,28 @@ export class LeadFormComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.getIpv4()
+        this.getIpv4();
     }
 
     getIpv4() {
         this.jsonp.get('//api.ipify.org/?format=jsonp&callback=JSONP_CALLBACK')
             .map(response => response.json())
             .subscribe(data => {
-                this.lead['ipv4'] = data['ip']
+                this.lead['ip'] = data['ip']
             }, error => {
                 console.log('Erro na captura de IP');
             });
     }
 
-    saveLead(name, lastname, email) {
-        this.lead = new Lead(name, lastname, email, this.lead.ipv4);
+    getDate() {
+        let date = moment();
+        return moment(date).format('YYYY-MM-DD HH:MM:SS');
+    }
+
+    saveLead(email, nome, lastname, tipo) {
+        let now = this.getDate();
+        let name = nome + ' ' + lastname;
+        this.lead = new Lead(email, name, this.lead.ip, tipo, now);
         this.angularFire.list("leads").push(this.lead).then(newLead => {
             this.leadSaved = true;
         }, error => {

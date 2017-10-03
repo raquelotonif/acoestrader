@@ -19,8 +19,20 @@
                 <input type="email" required email
                        [(ngModel)]="lead.email" name="email"/>
             </div>
+            <div class="col-xs-12">
+                <div class="col-xs-6">
+                    <input type="radio" required value="B2C"
+                           [(ngModel)]="lead.tipo" name="tipo"/>
+                    <span>Pessoa Física</span>
+                </div>
+                <div class="col-xs-6">
+                    <input type="radio" required value="B2B"
+                           [(ngModel)]="lead.tipo" name="tipo"/>
+                    <span>Pessoa Jurídica</span>
+                </div>
+            </div>
             <button type="submit" class="btn button button-call"
-                    (click)="saveLead(lead.name, lead.lastname, lead.email)"
+                    (click)="saveLead( lead.email, lead.name, lead.lastname, lead.tipo)"
                     [disabled]="!leadForm.form.valid">
                 Quero fazer parte!
             </button>
@@ -32,8 +44,9 @@
         <p>Obrigado por confiar em nosso trabalho.
             Clique no botão abaixo para baixar o ebook</p>
 
-     <button (click)="goToDownloadEbook()"
-     class="btn btn-success button button-success">baixar ebook</button>
+        <button (click)="goToDownloadEbook()"
+                class="btn btn-success button button-success">baixar ebook
+        </button>
     </section>
     <section *ngIf="leadError">
         <p>Ops =(</p>

@@ -61,7 +61,14 @@
     border-radius: 5px;
     border: none;
 }
-
+input[type=radio]{
+    display: inline-block;
+    position: relative;
+    height: 15px;
+    width: 15px!important;
+    margin-right: 5px;
+    top: 2px;
+}
 input:-webkit-autofill {
     -webkit-text-fill-color: #fff;
     -webkit-box-shadow: 0 0 0px 1000px #63b3b6 inset !important;
@@ -76,11 +83,16 @@ input:-webkit-autofill {
     font-weight: bold;
     margin-top: 15px;
     outline: none;
+    border: none;
     border-radius: 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
     line-height: 1.8;
     text-transform: uppercase;
     color: #fff;
+}
+
+.formulario .button:hover{
+    border: none;
 }
 .formulario .button-call {
     background: #fe9700;
