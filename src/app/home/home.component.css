@@ -24,6 +24,7 @@
     float: left;
     width: 50%;
     height: 100%;
+    margin-top: 110px;
 }
 
 .posts-container {
@@ -110,4 +111,12 @@
     width: 100%;
     min-height: 430px;
     background: #b1dfdd;
+}
+
+.titulo {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 50px;
+    margin-top: 10px;
+    color: white;
+    font-weight: bold;
 }
