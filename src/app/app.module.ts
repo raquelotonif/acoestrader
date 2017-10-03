@@ -6,7 +6,7 @@ import {JsonpModule} from '@angular/http';
 import {AngularFireModule} from 'angularfire2';
 import {AngularFireDatabase} from 'angularfire2/database';
 import {FirebaseConfig} from './../environments/firebase.config';
-
+import {FirebaseTesteConfig} from './../environments/firebase-teste.config';
 
 import {appRouting} from './app.routing';
 import {AppComponent} from './app.component';
@@ -22,7 +22,8 @@ import {AppComponent} from './app.component';
         FormsModule,
         JsonpModule,
         appRouting.routes,
-        AngularFireModule.initializeApp(FirebaseConfig)
+        // AngularFireModule.initializeApp(FirebaseConfig),
+        AngularFireModule.initializeApp(FirebaseTesteConfig)
     ],
     providers: [AngularFireDatabase],
     bootstrap: [AppComponent]
