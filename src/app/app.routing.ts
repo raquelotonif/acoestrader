@@ -1,5 +1,6 @@
 import {RouterModule, Routes} from '@angular/router';
 import {HomeComponent} from './home/home.component';
+import { FooterComponent } from './footer/footer.component';
 import {LeadFormComponent} from './lead-form/lead-form.component';
 
 import {PostComponent} from './post/post.component';
@@ -14,6 +15,6 @@ const appRoutes: Routes = [
 
 export const appRouting = {
     routes: RouterModule.forRoot(appRoutes),
-    components: [HomeComponent, LeadFormComponent,
+    components: [HomeComponent, FooterComponent, LeadFormComponent,
         PostComponent, PostListComponent, PostCardComponent]
 };

@@ -2,15 +2,23 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107359530-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments)};
+        function gtag() {
+            dataLayer.push(arguments)
+        }
+        ;
         gtag('js', new Date());
 
         gtag('config', 'UA-107359530-1');
     </script>
 
-    <section class="call">
-        <p></p>
-        <p></p>
+    <section class="section-call">
+        <section class="primary-call">
+            <!--<p class="call">-->
+                <!--{{primaryCall}}</p>-->
+        </section>
+        <section class="secondary-call">
+            <!--<p class="call">{{secondaryCall}}</p>-->
+        </section>
     </section>
     <lead-form></lead-form>
 </header>

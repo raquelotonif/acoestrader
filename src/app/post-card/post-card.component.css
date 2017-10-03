@@ -15,7 +15,7 @@
     height: 100%;
     padding: 20px;
     background: #fff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 .card:last-of-type {
@@ -58,9 +58,9 @@
 .card-content {
     overflow: hidden;
     text-overflow: ellipsis;
-    -webkit-line-clamp: 4;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
-    height: 115px;
+    height: 85px;
     line-height: 2;
     color: #999;
 }

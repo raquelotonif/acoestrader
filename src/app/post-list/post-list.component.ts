@@ -6,7 +6,7 @@ import {Component, OnInit} from '@angular/core';
     styleUrls: ['./post-list.component.css']
 })
 export class PostListComponent implements OnInit {
-    posts = [1,2,3];
+    posts = [1];
 
     constructor() {
     }

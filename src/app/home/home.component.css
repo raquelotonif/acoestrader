@@ -1,6 +1,5 @@
 .header {
     z-index: -1;
-    /*min-height: calc(100vh - 60px);*/
     min-height: 100vh;
     overflow: auto;
     background-image: url('../../assets/images/banner.jpg');
@@ -15,13 +14,30 @@
 
 @media (min-width: 768px) {
     .header {
-        padding: 50px calc(10% - 20px) 20px calc(10% - 40px);
+        /*padding: 50px calc(10% - 20px) 20px calc(10% - 40px);*/
     }
 }
 
-.call {
+.section-call {
     display: inline-block;
     float: left;
-    width: 50%;
+    width: 65%;
     height: 100%;
+    padding: 15% 8%;
+}
+
+.primary-call .call{
+    margin-bottom: 0;
+    font-size: 18px;
+    color: #fff;
+    text-shadow: 0.02em 0 0 #aaa;
+    text-transform: uppercase;
+}
+
+.secondary-call .call{
+    margin-bottom: 0;
+    font-size: 18px;
+    color: #fff;
+    text-shadow: 0.02em 0 0 #aaa;
+    font-weight: bold;
 }
