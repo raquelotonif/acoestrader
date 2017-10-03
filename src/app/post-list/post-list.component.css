@@ -1,0 +1,11 @@
+.posts-container {
+    display: inline-block;
+    width: 100%;
+    margin-top: -135px;
+}
+
+@media (min-width: 768px) {
+    .posts {
+        padding: 20px calc(10% - 40px);
+    }
+}
