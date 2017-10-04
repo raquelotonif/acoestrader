@@ -1,43 +1,84 @@
 .header {
     z-index: -1;
-    min-height: 100vh;
     overflow: auto;
-    background-image: url('../../assets/images/banner.jpg');
+    background-image: url('../../assets/images/banner2.jpg');
     background-size: auto 100%;
 }
 
 @media (max-width: 767px) {
     .header {
-        padding: 80px 20px;
+        padding: 80px 20px 20px 20px;
+
+    }
+
+    .section-call {
+        width: 100%;
+        padding: 20px 10px;
+    }
+
+    .primary-call .call {
+        font-size: 18px;
+    }
+    .secondary-call .call {
+        padding-top: 20px;
+    }
+    .bot-image {
+        width: 100%;
+        padding: 20px;
     }
 }
 
 @media (min-width: 768px) {
     .header {
+        min-height: 100vh;
         /*padding: 50px calc(10% - 20px) 20px calc(10% - 40px);*/
+    }
+
+    .section-call {
+        width: 52%;
+        padding: 15% 0 0 8%;
+    }
+    .primary-call .call {
+        font-size: 26px;
+    }
+
+    .secondary-call .call {
+        padding: 40px 30px 40px 0;
+    }
+    .bot-image {
+        width: 48%;
+        padding: 130px 105px 0 35px;
     }
 }
 
 .section-call {
     display: inline-block;
     float: left;
-    width: 65%;
     height: 100%;
-    padding: 15% 8%;
 }
 
-.primary-call .call{
+.primary-call .call {
     margin-bottom: 0;
-    font-size: 18px;
+    font-size: 26px;
     color: #fff;
-    text-shadow: 0.02em 0 0 #aaa;
+    font-weight: bold;
     text-transform: uppercase;
 }
 
-.secondary-call .call{
+.secondary-call .call {
     margin-bottom: 0;
     font-size: 18px;
-    color: #fff;
-    text-shadow: 0.02em 0 0 #aaa;
-    font-weight: bold;
+    color: #41878b;
+    text-shadow: 0.02em 0 0 #3c3c3c;
+    line-height: 1.8;
+}
+
+.bot-image {
+    display: inline-block;
+}
+
+.bot-image img {
+    width: 100%;
+    display: inline-block;
+    opacity: 0.7;
 }

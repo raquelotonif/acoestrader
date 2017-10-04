@@ -25,7 +25,6 @@ export class Lead {
 
 export class LeadFormComponent implements OnInit {
     lead = new Lead('', '', '', 'B2C', '');
-    tipoChecked = 'B2C';
     leadSaved: boolean = false;
     leadError: boolean = false;
 

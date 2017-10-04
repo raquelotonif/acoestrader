@@ -4,31 +4,24 @@
             Junte-se a nossa comunidade e receba um ebook gratuito!</p>
 
         <form #leadForm="ngForm">
-            <div>
-                <span>Nome</span>
-                <input type="text" [(ngModel)]="lead.name"
+            <div class="col-xs-12 col-md-3">
+                <input placeholder="Nome" type="text" [(ngModel)]="lead.name"
                        required name="name" minlength="3"/>
             </div>
-            <div>
-                <span>Sobrenome</span>
-                <input type="text" [(ngModel)]="lead.lastname"
+            <div class="col-xs-12 col-md-3">
+                <input placeholder="Sobrenome" type="text"
+                       [(ngModel)]="lead.lastname"
                        required name="lastname" minlength="3"/>
             </div>
-            <div>
-                <span>Email</span>
-                <input type="email" required email
+            <div class="col-xs-12 col-md-4">
+                <input placeholder="Email" type="email" required email
                        [(ngModel)]="lead.email" name="email"/>
             </div>
-            <div class="col-xs-12">
-                <div class="col-xs-6">
-                    <input type="radio" required value="B2C"
-                           [(ngModel)]="lead.tipo" name="tipo"/>
-                    <span>Pessoa Física</span>
-                </div>
-                <div class="col-xs-6">
+            <div class="col-xs-12 col-md-2">
+                <div class="col-xs-12">
                     <input type="radio" required value="B2B"
                            [(ngModel)]="lead.tipo" name="tipo"/>
-                    <span>Pessoa Jurídica</span>
+                    <span>Empresa</span>
                 </div>
             </div>
             <button type="submit" class="btn button button-call"

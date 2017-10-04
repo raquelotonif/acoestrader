@@ -10,6 +10,7 @@ import {FirebaseTesteConfig} from './../environments/firebase-teste.config';
 
 import {appRouting} from './app.routing';
 import {AppComponent} from './app.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
     declarations: [
@@ -22,10 +23,10 @@ import {AppComponent} from './app.component';
         FormsModule,
         JsonpModule,
         appRouting.routes,
-        // AngularFireModule.initializeApp(FirebaseConfig),
-        AngularFireModule.initializeApp(FirebaseTesteConfig)
+        AngularFireModule.initializeApp(FirebaseConfig),
+        // AngularFireModule.initializeApp(FirebaseTesteConfig)
     ],
-    providers: [AngularFireDatabase],
+    providers: [AngularFireDatabase,{provide: LocationStrategy, useClass: HashLocationStrategy}],
     bootstrap: [AppComponent]
 })
 export class AppModule {
