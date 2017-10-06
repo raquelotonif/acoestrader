@@ -6,14 +6,4 @@ import {Component} from '@angular/core';
     styleUrls: ['./app.component.css']
 })
 
-export class AppComponent {
-    showSidemenu = false;
-
-    toggleSidemenu() {
-        this.showSidemenu = !this.showSidemenu
-    }
-
-    onActivate(e, bodyScroll) {
-        bodyScroll.scrollTop = 0;
-    }
-}
+export class AppComponent {}

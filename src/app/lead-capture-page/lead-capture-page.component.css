@@ -1,0 +1,55 @@
+.landing {
+  width: 100%;
+  display: inline-block;
+  background-image: url('../../assets/images/banner2.jpg');
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+}
+
+.landing-panel {
+  background: #fff;
+  display: inline-block;
+  border-radius: 5px
+}
+
+.wrapper-image {
+  width: 35%;
+  display: inline-block;
+}
+
+.wrapper-image img {
+  width: 90%;
+  display: inline-block;
+}
+
+@media (max-width: 767px) {
+  .landing-panel {
+    margin: 70px 10px 10px 10px;
+  }
+
+  .wrapper-image {
+    width: 100%;
+  }
+  .wrapper-image img {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .landing {
+    height: 100vh;
+  }
+
+  .landing-panel {
+    margin: 10% 10% 0 10%;
+  }
+
+  .wrapper-image {
+    width: 35%;
+  }
+
+  .wrapper-image img {
+    width: 88%;
+    padding: 15px;
+  }
+}

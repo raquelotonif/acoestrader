@@ -1,5 +1,30 @@
-.footer{
-    height: 120px;
+.footer {
     width: 100%;
     background: rgb(118, 198, 202);
+}
+
+.footer a {
+    color: #fff;
+    display: inline-block;
+}
+
+@media (max-width: 767px) {
+    .footer {
+        padding: 0 10px;
+    }
+
+    .footer a {
+        padding: 20px 0;
+        font-size: 16px
+    }
+}
+
+@media (min-width: 768px) {
+    .footer {
+        padding: 0 10%;
+    }
+
+    .footer a {
+        padding: 20px 0;
+    }
 }

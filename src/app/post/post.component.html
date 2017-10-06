@@ -1,11 +1,16 @@
 <div class="post-wrapper">
-    <aside class="post">
-        <h2 class="post-title">{{postTitle}}</h2>
-        <div class="post-content">
-            <img src="{{postImage}}" class="post-image"/>
-            <p *ngFor="let paragrafo of postContent">{{paragrafo}}</p>
+  <aside class="post">
+    <h2 class="post-title">{{post.title}}</h2>
+    <div class="post-content">
+      <img src="{{post.image}}" class="post-image"/>
+      <div *ngFor="let wrapper of post.content">
+        <h3 *ngIf="wrapper.section.subtitle">{{wrapper.section.subtitle}}</h3>
+        <div *ngFor="let paragrafo of wrapper.section.paragrafos">
+          <p>{{paragrafo}}</p>
         </div>
-        <hr>
-        <lead-form class="form"></lead-form>
-    </aside>
+      </div>
+    </div>
+    <hr>
+    <lead-form class="form"></lead-form>
+  </aside>
 </div>

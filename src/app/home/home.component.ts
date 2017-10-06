@@ -6,8 +6,8 @@ import {Component, OnInit} from '@angular/core';
 })
 
 export class HomeComponent implements OnInit {
-    primaryCall = [`Investimento automatizado`];
-    secondaryCall = `O Ações Trader é um portal de conteúdos com foco em automatização
+    primaryCall = [`Mercado financeiro`];
+    secondaryCall = `O Ações Trader é um portal de conteúdo
     de investimentos para que você, investidor do mercado financeiro, tenha acesso a
     relevantes informações para a tomada de decisão.`;
 

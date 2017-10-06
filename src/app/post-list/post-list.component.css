@@ -1,10 +1,12 @@
 .posts-container {
     display: inline-block;
     width: 100%;
+  background: #fff;
+  margin-top: 40px;
 }
 
 @media (min-width: 768px) {
     .posts {
-        padding: 20px calc(10% - 20px);
+        padding: 20px calc(4% - 20px);
     }
 }

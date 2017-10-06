@@ -1,11 +1,17 @@
-<aside class="card-wrapper">
-    <a routerLink="posts/{{post.id}}" class="card">
-        <div class="card-thumb">
-            <img [src]="post.image" class="img-responsive"/>
+<aside class="card-wrapper" >
+  <a [routerLink]="['posts', id]" class="card">
+    <div class="card-thumb">
+      <img [src]="post.image" class="img-responsive"/>
+    </div>
+    <div class="card-body">
+      <p class="card-title">{{post.title}}</p>
+      <div class="card-content hidden-xs">
+        <div *ngFor="let wrapper of post.content">
+          <div *ngFor="let paragrafo of wrapper.section.paragrafos">
+            <p>{{paragrafo}}</p>
+          </div>
         </div>
-        <div class="card-body">
-            <p class="card-title">{{post.title}}</p>
-            <p class="card-content hidden-xs">{{post.content}}</p>
-        </div>
-    </a>
+      </div>
+    </div>
+  </a>
 </aside>

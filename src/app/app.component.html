@@ -1,29 +1,16 @@
 <nav class="blog-navbar">
   <a href="/" class="logo">
-    <img src="../assets/images/logotipo.svg" alt="Ações Trader"/>
+    <img src="../assets/images/logotipo2.svg" alt="Ações Trader"/>
+    <h1>Ações<span>Trader</span></h1>
   </a>
-  <!--<section class="navbar-page-links hidden-xs">-->
-    <!--<a href="/sobre">Sobre</a>-->
-    <!--<a href="/contato">Contato</a>-->
-    <!--<a href="/download">Baixe</a>-->
-  <!--</section>-->
-
-
-  <!--<a (click)="toggleSidemenu()"-->
-     <!--class="sidemenu-icon visible-xs">-->
-    <!--<i class="glyphicon glyphicon-menu-hamburger"></i>-->
-  <!--</a>-->
-  <!--<div class="sidebar visible-xs" *ngIf="showSidemenu">-->
-    <!--<a href="/sobre">Sobre</a>-->
-    <!--<a href="/contato">Contato</a>-->
-    <!--<a href="/download">Baixe</a>-->
-  <!--</div>-->
+  <div class="action-wrapper hidden-xs">
+    <button routerLink="ebook" class="action btn pull-right">Baixar Ebook</button>
+  </div>
 </nav>
 
-
-<div class="blog-scroll" #bodyScroll>
+<div class="blog-scroll">
   <section class="body">
-    <router-outlet (activate)="onActivate($event, bodyScroll)"></router-outlet>
+    <router-outlet></router-outlet>
   </section>
   <footer class="footer"></footer>
 </div>

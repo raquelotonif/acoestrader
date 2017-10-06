@@ -16,7 +16,6 @@
         margin: 0;
     }
     .post-content{
-        text-align: justify;
         font-size: 18px;
     }
 }
@@ -60,11 +59,14 @@
     float: left;
 }
 
-
+.post-content h3 {
+  margin: 40px 0 20px 0
+}
 .post-content p {
     padding-bottom: 5px;
     text-indent: 2.5em;
     line-height: 2;
     color: #777;
+    text-align: justify;
 }
 

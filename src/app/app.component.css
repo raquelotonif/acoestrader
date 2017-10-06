@@ -1,87 +1,115 @@
 .blog-navbar {
-    position: fixed;
-    width: 100%;
-    min-height: 60px;
-    background: rgba(255, 255, 255, 1);
-    z-index: 2;
-    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  width: 100%;
+  min-height: 60px;
+  background: rgba(255, 255, 255, 1);
+  z-index: 2;
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 0px 2px 2px rgba(0, 0, 0, 0.098), 0px 0px 5px 1px rgba(0, 0, 0, 0.084);
 }
 
-.logo{
-    display: inline-block;
+.logo {
+  display: inline-block;
+  padding-top: 2px;
 }
-.logo img{
-    max-height: 60px;
-    min-width: 150px;
+
+.logo img {
+  max-height: 60px;
+  min-width: 50px;
+  width: 50px;
+  float: left;
+  margin-top: 3px;
 }
+
+.logo h1 {
+ font-size: 22px;
+  display: inline-block;
+  float: left;
+  margin: 15px 7px;
+}
+
+.action-wrapper {
+  padding-top: 13px;
+  display: inline-block;
+  float: right;
+}
+
+.action {
+  background: #10e151;
+  color: #fff;
+  border-radius: 30px;
+  outline: none;
+}
+
+.action:hover {
+  outline: none;
+}
+
 @media (min-width: 768px) {
-    .blog-navbar {
-        padding: 0 5%;
-    }
-    .logo{
-        width: 25%;
-        padding: 10px 20px;
-    }
-}
+  .blog-navbar {
+    padding: 0 4%;
+  }
 
+  .logo {
+    width: 21%;
+  }
+}
 
 @media (max-width: 768px) {
-    .blog-navbar {
-        padding: 0 10%;
-    }
-    .logo{
-        width: 100%;
-        /*margin: 0 auto;*/
-    }
+  .blog-navbar {
+    padding: 0 10%;
+  }
+
+  .logo {
+    width: 100%;
+    /*margin: 0 auto;*/
+  }
 }
 
-
-
 .navbar-page-links {
-    float: right;
+  float: right;
 }
 
 .navbar-page-links a {
-    display: inline-block;
-    padding: 19px;
-    font-size: 16px;
-    text-transform: uppercase;
-    color: #ffffff;
+  display: inline-block;
+  padding: 19px;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #ffffff;
 }
 
 .sidemenu-icon {
-    display: inline-block;
-    float: right;
+  display: inline-block;
+  float: right;
 }
 
 .sidebar {
-    position: fixed;
-    top: 60px;
-    height: calc(100vh - 60px);
-    width: 100%;
-    background: #fff;
+  position: fixed;
+  top: 60px;
+  height: calc(100vh - 60px);
+  width: 100%;
+  background: #fff;
 }
 
 .sidebar a {
-    width: 100%;
-    color: #666;
+  width: 100%;
+  color: #666;
 }
 
 .sidemenu-icon i {
-    color: #fff;
-    font-size: 24px;
+  color: #fff;
+  font-size: 24px;
 }
 
 .blog-scroll {
-    display: inline-block;
-    float: left;
-    /*overflow: auto;*/
-    width: 100%;
-    height: 100vh;
-    /*height: calc(100vh - 60px);*/
-    /*margin-top: 60px;*/
+  display: inline-block;
+  float: left;
+  /*overflow: auto;*/
+  width: 100%;
+  height: 100vh;
+  /*height: calc(100vh - 60px);*/
+  /*margin-top: 60px;*/
 }
 
 .body {
-    min-height: calc(100vh - 369px);
+  min-height: calc(100vh - 369px);
 }
